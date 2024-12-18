@@ -1,6 +1,7 @@
 ﻿using System.Collections.Immutable;
 using System.Net;
 using Content.Server.IP;
+using Content.Shared.Database;
 using Robust.Shared.Network;
 
 namespace Content.Server.Database;
