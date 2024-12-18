@@ -23,7 +23,6 @@ namespace Content.Server.Database
         public NoteSeverity Severity { get; set; }
         public NetUserId? BanningAdmin { get; }
         public ServerUnbanDef? Unban { get; }
-        public ServerBanExemptFlags ExemptFlags { get; }
 
 
 
@@ -38,8 +37,7 @@ namespace Content.Server.Database
             string reason,
             NoteSeverity severity,
             NetUserId? banningAdmin,
-            ServerUnbanDef? unban,
-            ServerBanExemptFlags exemptFlags = default)
+            ServerUnbanDef? unban)
         {
             if (userId == null && address == null && hwId ==  null)
             {
@@ -65,7 +63,6 @@ namespace Content.Server.Database
             Severity = severity;
             BanningAdmin = banningAdmin;
             Unban = unban;
-            ExemptFlags = exemptFlags;
         }
 
         public string FormatBanMessage(IConfigurationManager cfg, ILocalizationManager loc)
